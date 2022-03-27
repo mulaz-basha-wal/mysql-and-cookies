@@ -1,38 +1,97 @@
-.App {
-  text-align: center;
+body {
+  background: linear-gradient(to right, #403a3e, #be5869);
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.clearfix {
+  overflow: auto;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.form-container {
+  width: 40%;
+  margin: 20px auto;
+  padding: 20px 50px;
+  border-radius: 10px;
+}
+.reload {
+  height: fit-content;
+  width: fit-content;
+  margin: 5px;
+}
+.dishes-list {
+  border-radius: 10px;
+}
+.btn-right {
+  text-align: right;
+}
+.table {
+  background-color: #fff;
+  border-radius: 10px 10px 0px 0px;
+}
+.cat-bar {
+  margin: 10px;
+  width: 90%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.form-select {
+  width: 90%;
+}
+.form-control {
+  margin: 10px;
+  width: 90%;
+}
+.categories-list {
+  padding: 30px;
+  display: flex;
+  flex-direction: row;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-wrap: wrap;
+}
+.category-wrapper {
+  background-color: #fff;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  width: 270px;
+}
+.wrap-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.header-bar {
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.link {
+  text-decoration: none;
   color: white;
+  font-weight: bold;
+  margin: 10px;
+  display: inline-block;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 650px) {
+  .form-container,
+  .table {
+    width: 90%;
   }
-  to {
-    transform: rotate(360deg);
+  .link {
+    margin: 10px;
+    font-size: 12px;
+  }
+}
+@media (min-width: 651px) and (max-width: 1000px) {
+  .form-container {
+    width: 60%;
   }
 }
